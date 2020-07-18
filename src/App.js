@@ -62,8 +62,8 @@ function App() {
               />
 
               <Budget 
-                budget={budget}
-                remaining={remaining}
+                budget={parseFloat(budget)}
+                remaining={parseFloat(remaining)}
               />
             </div>
           </div>
