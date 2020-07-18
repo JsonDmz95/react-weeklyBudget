@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/react-weeklyBudget/static/css/main.0d6e8273.chunk.css",
+    "main.js": "/react-weeklyBudget/static/js/main.2d4608fe.chunk.js",
+    "main.js.map": "/react-weeklyBudget/static/js/main.2d4608fe.chunk.js.map",
+    "runtime-main.js": "/react-weeklyBudget/static/js/runtime-main.1f38d51c.js",
+    "runtime-main.js.map": "/react-weeklyBudget/static/js/runtime-main.1f38d51c.js.map",
+    "static/js/2.dcb571a1.chunk.js": "/react-weeklyBudget/static/js/2.dcb571a1.chunk.js",
+    "static/js/2.dcb571a1.chunk.js.map": "/react-weeklyBudget/static/js/2.dcb571a1.chunk.js.map",
+    "index.html": "/react-weeklyBudget/index.html",
+    "precache-manifest.65186ee81c62bb6169481f67331a5263.js": "/react-weeklyBudget/precache-manifest.65186ee81c62bb6169481f67331a5263.js",
+    "service-worker.js": "/react-weeklyBudget/service-worker.js",
+    "static/css/main.0d6e8273.chunk.css.map": "/react-weeklyBudget/static/css/main.0d6e8273.chunk.css.map",
+    "static/js/2.dcb571a1.chunk.js.LICENSE.txt": "/react-weeklyBudget/static/js/2.dcb571a1.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.1f38d51c.js",
+    "static/js/2.dcb571a1.chunk.js",
+    "static/css/main.0d6e8273.chunk.css",
+    "static/js/main.2d4608fe.chunk.js"
+  ]
+}
