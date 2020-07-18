@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import Error from "./Error";
 import shortid from 'shortid';
 
-const Form = ({addNewExpense}) => {
+const Form = ({addNewExpense, saveCreateExpense}) => {
 
   const [expense, saveExpense] = useState({
     title: "",
@@ -28,6 +28,7 @@ const Form = ({addNewExpense}) => {
 
     //send exprense to app
     addNewExpense(expense);
+    saveCreateExpense(true);
 
     //clean form
     saveExpense({

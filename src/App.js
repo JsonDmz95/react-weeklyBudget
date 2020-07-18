@@ -1,7 +1,8 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Question from "./components/Question";
 import Form from "./components/Form";
 import List from "./components/List";
+import Budget from "./components/Budget";
 
 function App() {
   //define state
@@ -9,14 +10,31 @@ function App() {
   const [remaining, updateRemaining] = useState(0);
   const [question, updateQuestion] = useState(true);
   const [expenses, updateExpenses] = useState([]);
+  const [expense, addNewExpense] = useState({});
+  const [createExpense, saveCreateExpense] = useState(false);
+
+  // useEffect tha updates reaming
+  useEffect(() => {
+    if(createExpense){
+      updateExpenses([
+        ...expenses,
+        expense
+      ]);
+
+      const remaninBudget = remaining - expense.amount;
+      updateRemaining(remaninBudget);
+
+      saveCreateExpense(false);
+    }
+  }, [expense]);
 
   //Add a new expense
-  const addNewExpense = (expense) =>{
-    updateExpenses([
-      ...expenses,
-      expense
-    ]);
-  }
+  // const addNewExpense = (expense) =>{
+  //   updateExpenses([
+  //     ...expenses,
+  //     expense
+  //   ]);
+  // }
 
   return (
     <div className="container">
@@ -35,11 +53,17 @@ function App() {
             <div className="one-half column">
               <Form 
                 addNewExpense={addNewExpense}
+                saveCreateExpense={saveCreateExpense}
               />
             </div>
             <div className="one-half column">
               <List 
                 expenses={expenses}
+              />
+
+              <Budget 
+                budget={budget}
+                remaining={remaining}
               />
             </div>
           </div>
