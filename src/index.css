@@ -78,25 +78,25 @@ h2 {
   background-color: #fff3cd;
   border-color: #ffeeba;
 }
-.gastos-realizados  {
+.incurred-expenses  {
   margin-bottom: 2rem;
 }
-.gastos-realizados li{
+.incurred-expenses li{
   list-style: none;
   margin-bottom: 0rem;
   border-bottom: 1px solid #e1e1e1;
   padding: 1rem 0;
 }
-.gastos-realizados li:last-of-type {
+.incurred-expenses li:last-of-type {
   margin-bottom: 0!important;
 }
-.gastos-realizados li p {
+.incurred-expenses li p {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin:0;
 }
-.gastos-realizados li p .gasto {
+.incurred-expenses li p .expense {
   background-color: #004085;
   padding: 1rem;
   color:white;

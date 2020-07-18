@@ -9,7 +9,7 @@ const Question = ({addBudget, updateRemaining, updateQuestion}) => {
 
   //define saveBudget
   const handleChange = e => {
-    updateBudget(parseFloat(e.target.value, 10));
+    updateBudget(parseFloat(e.target.value, 10).toFixed(2));
   }
 
   //Submitt to set budget
