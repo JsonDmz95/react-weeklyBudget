@@ -1,7 +1,7 @@
 import React, {Fragment, useState} from 'react';
 import Error from "./Error";
 
-const Question = ({addBudget, updateRemaining}) => {
+const Question = ({addBudget, updateRemaining, updateQuestion}) => {
 
   //define Question State 
   const [budget, updateBudget] = useState(0);
@@ -9,7 +9,7 @@ const Question = ({addBudget, updateRemaining}) => {
 
   //define saveBudget
   const handleChange = e => {
-    updateBudget(parseInt(e.target.value, 10));
+    updateBudget(parseFloat(e.target.value, 10));
   }
 
   //Submitt to set budget
@@ -26,6 +26,7 @@ const Question = ({addBudget, updateRemaining}) => {
     saveError(false);
     addBudget(budget);
     updateRemaining(budget);
+    updateQuestion(false);
   }
 
   return ( 
@@ -39,6 +40,7 @@ const Question = ({addBudget, updateRemaining}) => {
       >
         <input 
           type="number"
+          step="0.01"
           className="u-full-width"
           placeholder="Typer your budget here..."
           onChange={handleChange}
@@ -46,7 +48,7 @@ const Question = ({addBudget, updateRemaining}) => {
 
         <input 
           type="Submit"
-          className="button-primaty u-full-width"
+          className="button-primary u-full-width"
           value="Set Budget"
           readOnly={true}
         />
