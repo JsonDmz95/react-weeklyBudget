@@ -21,12 +21,12 @@ function App() {
         expense
       ]);
 
-      const remaninBudget = remaining - expense.amount;
-      updateRemaining(remaninBudget);
+      const remainingBudget = remaining - expense.amount;
+      updateRemaining(remainingBudget);
 
       saveCreateExpense(false);
     }
-  }, [expense]);
+  }, [expense, createExpense, updateExpenses, expenses, remaining, saveCreateExpense]);
 
   //Add a new expense
   // const addNewExpense = (expense) =>{

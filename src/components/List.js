@@ -1,5 +1,4 @@
 import React from "react";
-import Exprese from "./Expense";
 import Expense from "./Expense";
 
 const List = ({ expenses }) => (
